@@ -1,4 +1,4 @@
-Daniil Koshelyuk exercise on AI: Decision trees led by WelchLabs.
+Daniil Koshelyuk exercise on AI: Neural Network led by WelchLabs.
 
                                         THEORY
 
