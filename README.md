@@ -1,4 +1,4 @@
-# 01_AI_NeuralNetwork
+# 00_AI_NeuralNetwork
 My name is Daniil Koshelyuk. I do programming as a hobby.
 This project is my take and slight adaptation of ingenious series by Stephen Welch on Neural Networks.
 Links:
