@@ -1,0 +1,54 @@
+Daniil Koshelyuk exercise on AI: Decision trees led by WelchLabs.
+
+                                        THEORY
+
+Supervised Regression Algorythm - Artificial Neural Network.
+- Supervised - training data has input and output
+  - Regression - continuous output field
+  - Categorization - discrete outputs
+
+Synapse - Multiply the input by weight.
+Neuron -
+    1) Add up together all synapses' outputs;
+    2) apply activation function.
+
+Steps:
+
+1. Scale data.
+2. Design Network:
+       - Number of inputs;
+       - Number of outputs;
+       - Amount of hidden layers;
+       - Amount of nodes per layer.
+3. Training Network - Minimizing cost Function.
+    Affected by:
+       - examples,
+       - weights.
+    Ways to assess:
+       - brute force (problem: dimensions);
+       - numerical estimation;
+       - batch gradient descent (problem: nonconvex relationships);
+       - stochastic gradient descent - one example at a time (plus: might not matter if nonconvex relationship).
+4. Training
+    Problems with simply going along the descent in Gradient Descent especially in multiple dimensions:
+        - can get stuck in local minimum;
+        - can go too slowly - making too many iterations;
+        - risk to bounce out of the minimum.
+    Entire field working on improving inputs to minimize output of objective function - Mathematical Optimization.
+    Approaches of Mathematical Optimization:
+        - practical (heuristics);
+        - theoretical (rigorous).
+    NB! Reference: Yann LeCun - "Efficient BackProp".
+    Here using Broyden-Fletcher-Goldfarb-Shanno (BFGS) numerical optimization method.
+5. Address Overfitting
+    The problem is that inputs are not fully directly responsible for outputs or are not completely covering the process in our model.
+    Observations consist of signal and noise.
+    NB! Reference: Nate Silver - "The signal of noise".
+    To detect the problem the data should be divided in two parts - training and testing.
+    To deal with overfitting:
+        - use more data:
+            NB! Rule of thumb: number of examples = number of degrees of freedom * 10.
+            NB! Reference: Yaser Abu-Mostafa - Lecture at Caltech https://www.youtube.com/watch?v=Dc0sr0kdBVI.
+        - use regularization:
+            Add a term to penalize overly complex overfitted models.
+                + method1: add squares of weights to cost function + tweak regularization parameter (the higher the more generalized model).
