@@ -2,7 +2,7 @@ Daniil Koshelyuk exercise on AI: Neural Network led by WelchLabs.
 
                                         THEORY
 
-Supervised Regression Algorythm - Artificial Neural Network.
+Supervised Regression Algorithm - Artificial Neural Network.
 - Supervised - training data has input and output
   - Regression - continuous output field
   - Categorization - discrete outputs
